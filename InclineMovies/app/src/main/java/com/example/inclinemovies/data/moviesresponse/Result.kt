@@ -1,4 +1,4 @@
-package com.example.inclinemovies.data
+package com.example.inclinemovies.data.moviesresponse
 
 
 import com.squareup.moshi.Json

@@ -1,11 +1,11 @@
-package com.example.inclinemovies.data
+package com.example.inclinemovies.data.moviesresponse
 
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class PopularMovies(
+data class MoviesResponse(
     @Json(name = "page")
     val page: Int,
     @Json(name = "results")
