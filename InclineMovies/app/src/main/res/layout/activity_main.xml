@@ -17,9 +17,27 @@
         android:textSize="25sp"
         android:textColor="@color/purple_700"/>
 
-    <Button
-        android:id="@+id/fetch_movies"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"/>
+        android:text="@string/popular_movies"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    </ScrollView>
 </LinearLayout>

@@ -14,10 +14,5 @@ class MainActivity : AppCompatActivity() {
 
         val viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(AllMoviesViewModel::class.java)
 
-        val fetchMovies = findViewById<Button>(R.id.fetch_movies)
-
-        fetchMovies.setOnClickListener {
-            viewModel.fetchPopularMovies()
-        }
     }
 }
