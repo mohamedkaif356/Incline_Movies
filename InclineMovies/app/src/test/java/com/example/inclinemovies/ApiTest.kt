@@ -14,24 +14,23 @@ class ApiTest {
     private val mr = MoviesRepository()
 
     @Test
-    fun api_test(){
+    fun api_test() {
 
-        runBlocking {
-            val popular = rb.api.getPopularMovies(Constants.API_KEY)
-            val topRated = rb.api.getTopRatedMovies(Constants.API_KEY)
-            val upcoming = rb.api.getUpcomingMovies(Constants.API_KEY)
-            val movieDetails = rb.api.getMovieDetails(508943, Constants.API_KEY, "videos")
-            val searchMovies = rb.api.getSearchedMovie(Constants.API_KEY, "Jack sparrow")
-            assertNotNull(popular.body()?.results)
-            assertNotNull(topRated.body()?.results)
-            assertNotNull(upcoming.body()?.results)
-            assertNotNull(movieDetails.body()?.originalTitle)
-            assertNotNull(searchMovies.body()?.results)
-        }
+        val popular = rb.api.getPopularMovies(Constants.API_KEY)
+        val topRated = rb.api.getTopRatedMovies(Constants.API_KEY)
+        val upcoming = rb.api.getUpcomingMovies(Constants.API_KEY)
+        val movieDetails = rb.api.getMovieDetails(508943, Constants.API_KEY, "videos")
+        val searchMovies = rb.api.getSearchedMovie(Constants.API_KEY, "Jack sparrow")
+        assertNotNull(popular.body()?.results)
+        assertNotNull(topRated.body()?.results)
+        assertNotNull(upcoming.body()?.results)
+        assertNotNull(movieDetails.body()?.originalTitle)
+        assertNotNull(searchMovies.body()?.results)
+
     }
 
     @Test
-    fun repository_test(){
+    fun repository_test() {
 
         runBlocking {
             val popular = mr.getPopularMovies()
