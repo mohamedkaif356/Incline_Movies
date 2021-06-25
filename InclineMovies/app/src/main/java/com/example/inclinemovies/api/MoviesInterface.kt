@@ -12,22 +12,22 @@ import retrofit2.http.QueryName
 interface MoviesInterface {
 
     @GET("movie/popular")
-    suspend fun getPopularMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
+    fun getPopularMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
 
     @GET("movie/top_rated")
-    suspend fun getTopRatedMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
+    fun getTopRatedMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
 
     @GET("movie/upcoming")
-    suspend fun getUpcomingMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
+    fun getUpcomingMovies(@Query("api_key") api_key:String) : Response<MoviesResponse>
 
     @GET("movie/{movie_id}")
-    suspend fun getMovieDetails(@Path("movie_id") id: Int,
+    fun getMovieDetails(@Path("movie_id") id: Int,
                                 @Query("api_key") api_key: String,
                                 @Query("append_to_response") append_to_response: String)
     : Response<MovieDetails>
 
     @GET("search/movie")
-    suspend fun getSearchedMovie(@Query("api_key") api_key: String,
+    fun getSearchedMovie(@Query("api_key") api_key: String,
                                  @Query("query") queryName: String)
     : Response<MovieSearch>
 
