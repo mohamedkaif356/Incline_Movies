@@ -12,7 +12,7 @@ import com.example.inclinemovies.R
 import com.example.inclinemovies.data.Constants
 import com.example.inclinemovies.data.moviesresponse.Result
 
-class PopularMoviesAdapter : RecyclerView.Adapter<PopularMoviesAdapter.MoviesViewHolder>() {
+class TopRatedMoviesAdapter : RecyclerView.Adapter<TopRatedMoviesAdapter.MoviesViewHolder>() {
 
 
     inner class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -36,11 +36,11 @@ class PopularMoviesAdapter : RecyclerView.Adapter<PopularMoviesAdapter.MoviesVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         return MoviesViewHolder(
-                LayoutInflater.from(parent.context).inflate(
-                        R.layout.movies_list,
-                        parent,
-                        false
-                )
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.movies_list,
+                parent,
+                false
+            )
         )
     }
 
