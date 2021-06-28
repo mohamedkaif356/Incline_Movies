@@ -16,7 +16,7 @@ import com.example.inclinemovies.data.Constants
 import com.example.inclinemovies.data.moviesresponse.Result
 import com.example.inclinemovies.ui.details.MoviesDetails
 
-class TopRatedMoviesAdapter(private val context: Context) : RecyclerView.Adapter<TopRatedMoviesAdapter.MoviesViewHolder>() {
+class SimilarMoviesAdapter(private val context: Context) : RecyclerView.Adapter<SimilarMoviesAdapter.MoviesViewHolder>() {
 
 
     inner class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

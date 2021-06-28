@@ -11,7 +11,7 @@ data class MovieDetails(
     @Json(name = "backdrop_path")
     val backdropPath: String,
     @Json(name = "belongs_to_collection")
-    val belongsToCollection: BelongsToCollection?,
+    val belongsToCollection: Any?,
     @Json(name = "budget")
     val budget: Int,
     @Json(name = "genres")
@@ -52,8 +52,6 @@ data class MovieDetails(
     val title: String,
     @Json(name = "video")
     val video: Boolean,
-    @Json(name = "videos")
-    val videos: Videos,
     @Json(name = "vote_average")
     val voteAverage: Double,
     @Json(name = "vote_count")

@@ -1,4 +1,4 @@
-package com.example.inclinemovies.ui
+package com.example.inclinemovies.ui.home
 
 import androidx.lifecycle.*
 import com.example.inclinemovies.data.MoviesRepository

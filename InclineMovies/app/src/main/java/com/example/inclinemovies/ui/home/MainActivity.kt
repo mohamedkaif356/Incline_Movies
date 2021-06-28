@@ -1,8 +1,7 @@
-package com.example.inclinemovies.ui
+package com.example.inclinemovies.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inclinemovies.R
@@ -25,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         val topRatedMoviesRV = findViewById<RecyclerView>(R.id.rv_topRated_movies)
         val upcomingMoviesRV = findViewById<RecyclerView>(R.id.rv_upcoming_movies)
 
-        popularMoviesAdapter = PopularMoviesAdapter()
-        topRatedMoviesAdapter = TopRatedMoviesAdapter()
-        upcomingMoviesAdapter = UpcomingMoviesAdapter()
+        popularMoviesAdapter = PopularMoviesAdapter(this)
+        topRatedMoviesAdapter = TopRatedMoviesAdapter(this)
+        upcomingMoviesAdapter = UpcomingMoviesAdapter(this)
 
         popularMoviesRV.adapter = popularMoviesAdapter
         topRatedMoviesRV.adapter = topRatedMoviesAdapter
