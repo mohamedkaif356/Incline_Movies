@@ -15,6 +15,17 @@ With the app, you can:
 This app uses [The Movie Database](https://www.themoviedb.org/documentation/api) API to retrieve movies.
 You must provide your own API key in order to build the app.
 
+## Screens
+
+![screen](https://user-images.githubusercontent.com/52997693/123966330-f4e5ea00-d9d2-11eb-869b-cab701441d0a.jpeg)
+
+
+![screen](https://user-images.githubusercontent.com/52997693/123966475-16df6c80-d9d3-11eb-9aaf-30f12df76054.jpeg)
+
+
+![screen](https://user-images.githubusercontent.com/52997693/123966550-28c10f80-d9d3-11eb-8b6c-6daf24f7196e.jpeg)
+
+
 ## Libraries
 
 * [Paging 3](https://github.com/MindorksOpenSource/Paging3-Android-Tutorial)
