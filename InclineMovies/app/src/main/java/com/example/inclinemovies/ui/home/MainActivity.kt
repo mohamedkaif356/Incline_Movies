@@ -44,8 +44,6 @@ class MainActivity : AppCompatActivity() {
                 ViewModelProvider.AndroidViewModelFactory.getInstance(application))
                 .get(AllMoviesViewModel::class.java)
 
-        Constants.RESULT_PAGE = 10
-
         viewModel.fetchPopularMovies()
         viewModel.fetchTopRatedMovies()
         viewModel.fetchUpcomingMovies()

@@ -1,5 +1,6 @@
 package com.example.inclinemovies.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -33,12 +34,15 @@ class SearchMoviesAdapter(private val context: Context)
         )
     }
 
+    @SuppressLint("ResourceType")
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
 
         val movie = getItem(position)
 
         holder.apply {
-            Glide.with(itemView).load(Constants.IMAGE_URL + movie?.posterPath).into(moviePoster)
+            Glide.with(itemView)
+                .load(Constants.IMAGE_URL + movie?.posterPath)
+                .into(moviePoster)
             val intent = Intent(context, MoviesDetails::class.java)
             intent.putExtra("MovieID", movie?.id)
             movieDetails.setOnClickListener {

@@ -7,4 +7,6 @@
     <string name="upcoming_movies">Upcoming Movies</string>
     <string name="similar_movies">Similar Movies</string>
     <string name="search_movies">Search Movies</string>
+    <string name="results_could_not_be_loaded">Results could not be loaded</string>
+    <string name="retry">Retry</string>
 </resources>

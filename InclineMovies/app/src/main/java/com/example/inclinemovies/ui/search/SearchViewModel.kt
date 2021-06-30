@@ -7,7 +7,9 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.example.inclinemovies.data.MoviesRepository
 
-class SearchViewModel(private val repository: MoviesRepository) : ViewModel() {
+class SearchViewModel : ViewModel() {
+
+    private val repository = MoviesRepository()
 
     private val currentQuery = MutableLiveData(DEFAULT_QUERY)
 

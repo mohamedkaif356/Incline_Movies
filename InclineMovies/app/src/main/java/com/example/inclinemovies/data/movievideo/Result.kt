@@ -13,7 +13,7 @@ data class Result(
     @Json(name = "iso_639_1")
     val iso6391: String,
     @Json(name = "key")
-    val key: String,
+    val key: String?,
     @Json(name = "name")
     val name: String,
     @Json(name = "site")

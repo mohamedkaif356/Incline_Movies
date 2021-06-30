@@ -79,7 +79,10 @@ class MoviesDetails : AppCompatActivity() {
         playTrailer.addYouTubePlayerListener(object : AbstractYouTubePlayerListener(){
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 super.onReady(youTubePlayer)
-                youTubePlayer.loadVideo(video!![0].key, 0F)
+                if (video!![0].key != null){
+                    youTubePlayer.loadVideo(video[0].key!!, 0F)
+                }
+
             }
         })
     }

@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InclineMovies">
-        <activity android:name=".ui.search.SearchMovies"></activity>
+        <activity android:name=".ui.search.SearchMovies"
+            android:theme="@style/Theme.InclineMovies.actionbar"
+            android:label="Search Movies">
+        </activity>
         <activity android:name=".ui.details.MoviesDetails" />
         <activity android:name=".ui.home.MainActivity">
             <intent-filter>
