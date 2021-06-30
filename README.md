@@ -5,6 +5,7 @@ Here is a fully functional and colorful android app which I made from scratch. I
 
 With the app, you can:
 * Discover the Popular, Trending and Upcoming Movies.
+* Search Movies. 
 * Create favorite and watch list of movies locally.
 * Watch trailers.
 * Read reviews and details.
