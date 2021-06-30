@@ -33,8 +33,9 @@ interface MoviesInterface {
 
     @GET("search/movie")
     suspend fun getSearchedMovie(@Query("api_key") api_key: String,
-                                 @Query("query") queryName: String)
-    : Response<MovieSearch>
+                                 @Query("query") queryName: String,
+                                 @Query("page") page: Int)
+    : MovieSearch
 
     @GET("movie/{movie_id}/similar")
     suspend fun getSimilarMovie(@Path("movie_id") id: Int,

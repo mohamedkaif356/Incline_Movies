@@ -64,4 +64,7 @@ dependencies {
     //Youtube Video Player
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 
+    //paging
+    implementation "androidx.paging:paging-runtime:3.0.0-alpha05"
+
 }

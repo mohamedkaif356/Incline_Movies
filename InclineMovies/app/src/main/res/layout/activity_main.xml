@@ -1,93 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.MainActivity"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:layout_height="match_parent">
 
-    <TextView
+    <ImageView
+        android:id="@+id/iv_search_movies"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search"
+        android:contentDescription="@string/search_movies" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="25sp"
-        android:textColor="@color/purple_700"/>
+        android:layout_height="match_parent"
+        tools:context=".ui.home.MainActivity"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popular_movies"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="18sp"
-        android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="25sp"
+            android:textColor="@color/purple_700"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_popular_movies"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+            android:text="@string/popular_movies"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/trending_movies"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="18sp"
-        android:textColor="@color/white"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </ScrollView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_topRated_movies"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+            android:text="@string/trending_movies"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/upcoming_movies"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="18sp"
-        android:textColor="@color/white"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_topRated_movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </ScrollView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_upcoming_movies"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+            android:text="@string/upcoming_movies"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_upcoming_movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+        </ScrollView>
 
 
 
 
-</LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

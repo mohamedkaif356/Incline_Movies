@@ -22,12 +22,12 @@ class ApiTest {
             val topRated = rb.api.getTopRatedMovies(Constants.API_KEY, Constants.RESULT_PAGE)
             val upcoming = rb.api.getUpcomingMovies(Constants.API_KEY, Constants.RESULT_PAGE)
             val movieDetails = rb.api.getMovieDetails(508943, Constants.API_KEY)
-            val searchMovies = rb.api.getSearchedMovie(Constants.API_KEY, "Jack sparrow")
+            val searchMovies = rb.api.getSearchedMovie(Constants.API_KEY, "Jack sparrow", Constants.RESULT_PAGE)
             assertNotNull(popular.body()?.results)
             assertNotNull(topRated.body()?.results)
             assertNotNull(upcoming.body()?.results)
             assertNotNull(movieDetails.body()?.originalTitle)
-            assertNotNull(searchMovies.body()?.results)
+            assertNotNull(searchMovies.results)
 
         }
 
@@ -49,7 +49,7 @@ class ApiTest {
             assertNotNull(upcoming.body()?.results)
             assertNotNull(movieDetails.body()?.originalTitle)
             assertNotNull(movieVideo.body()?.results)
-            assertNotNull(searchMovies.body()?.results)
+            assertNotNull(searchMovies)
         }
     }
 }

@@ -1,5 +1,8 @@
 package com.example.inclinemovies.data
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.liveData
 import com.example.inclinemovies.api.RetrofitBuilder
 
 class MoviesRepository {
@@ -17,7 +20,15 @@ class MoviesRepository {
 
     suspend fun getMovieVideo(id: Int) = rb.getMovieVideo(id, Constants.API_KEY)
 
-    suspend fun searchMovies(movieName: String) = rb.getSearchedMovie(Constants.API_KEY, movieName)
+    fun searchMovies(movieName: String) =
+        Pager(
+            config = PagingConfig(
+                pageSize = 100,
+                maxSize = 1000,
+                enablePlaceholders = false
+            ),
+            pagingSourceFactory = { SearchPagingSource(rb, movieName)}
+        ).liveData
 
     suspend fun getSimilarMovies(id: Int) = rb.getSimilarMovie(id, Constants.API_KEY)
 }
